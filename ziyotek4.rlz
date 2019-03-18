@@ -1,0 +1,19 @@
+#template for REVERSE lookup zone
+$TTL 1D
+@       IN SOA  prdx-nsmaster14.ziyotek4.local. root.prdx-nsmaster14.ziyotek4.local. (
+                                        10      ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+
+;;;;;  DNS Servers
+@               IN      NS      prdx-nsmaster14.ziyotek4.local.    ;Master FQDN
+masterdns       IN      A       192.168.40.174
+@               IN      NS      prdx-nsworker14.ziyotek4.local.   ;Slave FQDN
+@               IN      NS      prdx-nsmaster24.ziyotek4.local.
+174             IN      PTR     prdx-nsmaster14.ziyotek4.local.
+175             IN      PTR     prdx-nsworker14.ziyotek4.local.
+176             IN      PTR     prdx-nsworker24.ziyotek4.local.
+
+;; SERVERS
