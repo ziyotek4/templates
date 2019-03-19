@@ -6,7 +6,7 @@ MENU TITLE ######## PXE Menu #########
 LABEL 1
 MENU LABEL ^1) Install CentOS 7
 KERNEL /networkboot/centos7/vmlinuz
-APPEND initrd=/networkboot/initrd.img inst.repo=ftp://192.168.40.180/pub/repo ks=ftp://192.168.40.180/pub/centos7.cfg
+APPEND initrd=/networkboot/initrd.img inst.repo=ftp://192.168.40.180/pub/centos7 ks=ftp://192.168.40.180/pub/centos7.cfg
 
 LABEL 2
 MENU LABEL ^2) Install CentOS 6
