@@ -1,3 +1,4 @@
+#THIS FILE PUSHED FROM ANSIBLE
 # Example config file /etc/vsftpd/vsftpd.conf
 #
 # The default compiled in settings are fairly paranoid. This sample file
@@ -10,6 +11,7 @@
 #
 # Allow anonymous FTP? (Beware - allowed by default if you comment this out).
 anonymous_enable=YES
+anon_root=/var/ftp/pub
 #
 # Uncomment this to allow local users to log in.
 # When SELinux is enforcing check for SE bool ftp_home_dir
@@ -98,7 +100,7 @@ xferlog_std_format=YES
 # (Warning! chroot'ing can be very dangerous. If using chroot, make sure that
 # the user does not have write access to the top level directory within the
 # chroot)
-#chroot_local_user=YES
+chroot_local_user=YES
 #chroot_list_enable=YES
 # (default follows)
 #chroot_list_file=/etc/vsftpd/chroot_list
